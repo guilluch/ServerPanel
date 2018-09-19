@@ -1,0 +1,6 @@
+{
+    "taskName": "Serve",
+    "command": "ng serve --serve-path server-panel",
+    "type": "shell",
+    "problemMatcher": "$tsc"
+}
