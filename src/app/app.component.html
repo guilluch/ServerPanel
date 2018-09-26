@@ -1,13 +1,18 @@
 <header>
   <nav class="navbar">
     <ul>
+      <!--<li><a class="waves-effect waves-light" routerLink="/">Index</a></li>-->
+      <!--<li *ngIf="isConnected()"><a class="waves-effect waves-light" routerLink="/chat">Chat</a></li>-->
       <li class="placeholder"></li>
       <form class="searchbar minimized full-rounded">
-        <input class="" type="text" />
+        <input class="" type="text"/>
         <i class="material-icons">search</i>
       </form>
       <li class="placeholder"></li>
-      <!-- <li *ngIf="isConnected()"><a class="waves-effect waves-light" (click)="logout()">Logout</a></li> -->
+      <!--<li *ngIf="!isConnected()"><a class="waves-effect waves-light" routerLink="/login">Login</a></li>-->
+      <!--<li *ngIf="!isConnected()"><a class="waves-effect waves-light" routerLink="/sign-up">Sign up</a></li>-->
+      <!--<li *ngIf="isConnected()"><a class="waves-effect waves-light">Account</a></li>-->
+      <li *ngIf="isConnected()"><a class="waves-effect waves-light" (click)="logout()">Logout</a></li>
     </ul>
   </nav>
 </header>
