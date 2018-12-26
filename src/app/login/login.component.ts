@@ -23,6 +23,6 @@ export class LoginComponent implements OnInit {
     event.preventDefault();
     const username = $('#username').val();
     const password = $('#password').val();
-    this.sessionService.login(username, password, '/chat');
+    this.sessionService.login(username, password, '/admin');
   }
 }
