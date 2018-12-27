@@ -57,4 +57,28 @@ export class QueriesService {
       .set('password', user.password);
     return this.http.post('http://omegaserv.net/omega-social/controller/addUser.php', params);
   }
+
+  startTS() {
+    const jwt = JwtService.get();
+    const params = new HttpParams()
+      .set('jwt', jwt);
+    console.log(jwt);
+    return this.http.get<any>('http://omegaserv.net/server-panel/controller/startTS.php', {params});
+  }
+
+  stopTS() {
+    const jwt = JwtService.get();
+    const params = new HttpParams()
+      .set('jwt', jwt);
+    console.log(jwt);
+    return this.http.get<any>('http://omegaserv.net/server-panel/controller/stopTS.php', {params});
+  }
+
+  restartTS() {
+    const jwt = JwtService.get();
+    const params = new HttpParams()
+      .set('jwt', jwt);
+    console.log(jwt);
+    return this.http.get<any>('http://omegaserv.net/server-panel/controller/restartTS.php', {params});
+  }
 }
