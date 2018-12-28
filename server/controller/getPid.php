@@ -10,6 +10,3 @@ function getPid($process) {
         echo json_encode($output[0]);
     }
 }
-
-
-loginRequired('getPid', ['ts3server']);

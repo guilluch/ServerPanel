@@ -62,7 +62,6 @@ export class QueriesService {
     const jwt = JwtService.get();
     const params = new HttpParams()
       .set('jwt', jwt);
-    console.log(jwt);
     return this.http.get<any>('http://omegaserv.net/server-panel/controller/startTS.php', {params});
   }
 
@@ -70,7 +69,6 @@ export class QueriesService {
     const jwt = JwtService.get();
     const params = new HttpParams()
       .set('jwt', jwt);
-    console.log(jwt);
     return this.http.get<any>('http://omegaserv.net/server-panel/controller/stopTS.php', {params});
   }
 
@@ -78,7 +76,52 @@ export class QueriesService {
     const jwt = JwtService.get();
     const params = new HttpParams()
       .set('jwt', jwt);
-    console.log(jwt);
     return this.http.get<any>('http://omegaserv.net/server-panel/controller/restartTS.php', {params});
+  }
+
+  getFactorioSaves() {
+    const jwt = JwtService.get();
+    const params = new HttpParams()
+      .set('jwt', jwt);
+    return this.http.get<any>('http://omegaserv.net/server-panel/controller/getFactorioSaves.php', {params});
+  }
+
+  createFactorio(name: string) {
+    const jwt = JwtService.get();
+    const params = new HttpParams()
+      .set('jwt', jwt)
+      .set('name', name);
+    return this.http.get<any>('http://omegaserv.net/server-panel/controller/createFactorio.php', {params});
+  }
+
+  deleteFactorio(name: string) {
+    const jwt = JwtService.get();
+    const params = new HttpParams()
+      .set('jwt', jwt)
+      .set('name', name);
+    return this.http.get<any>('http://omegaserv.net/server-panel/controller/deleteFactorio.php', {params});
+  }
+
+  startFactorio(name: string) {
+    const jwt = JwtService.get();
+    const params = new HttpParams()
+      .set('jwt', jwt)
+      .set('name', name);
+    return this.http.get<any>('http://omegaserv.net/server-panel/controller/startFactorio.php', {params});
+  }
+
+  stopFactorio() {
+    const jwt = JwtService.get();
+    const params = new HttpParams()
+      .set('jwt', jwt);
+    return this.http.get<any>('http://omegaserv.net/server-panel/controller/stopFactorio.php', {params});
+  }
+
+  restartFactorio(name: string) {
+    const jwt = JwtService.get();
+    const params = new HttpParams()
+      .set('jwt', jwt)
+      .set('name', name);
+    return this.http.get<any>('http://omegaserv.net/server-panel/controller/restartFactorio.php', {params});
   }
 }

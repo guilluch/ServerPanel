@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+app-server-selector {
+    width: 20%;
+}
+
+.scrollbar::-webkit-scrollbar {
+    width: 0.5rem;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24) inset;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    opacity: 0;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    opacity: 0;
+    background-color: #6e6e6e;
+    box-shadow: none;
+    transition: 0.3s;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: #7e7e7e;
+}
+
+
+.scrollbar-hidden::-webkit-scrollbar {
+    display: none;
+}
+
+
+h1 {
+    font-size: 0.1rem;
+}
+
+.main {
+    max-height: calc(100vh - 3.5rem);
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.block {
+    padding: 1rem;
+}
+

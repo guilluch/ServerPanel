@@ -7,4 +7,4 @@ function stopFactorio() {
     echo json_encode($output);
 }
 
-loginRequired('stopFactorio');
+//loginRequired('stopFactorio');
