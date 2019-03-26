@@ -1,29 +1,39 @@
-<div class="row">
+<div class="d-flex">
   <app-server-selector></app-server-selector>
-  <main class="main scrollbar">
-    <div class="container">
-      <div class="block shadow much-rounded">
-        <h1>Factorio</h1>
-        <form #form="ngForm" (ngSubmit)="startFactorio(form, $event)">
-          <div>
-            <select #creationSelect name="creationSelect" [(ngModel)]="data.creationSelect">
-              <option *ngFor="let save of factorioSaves">{{save}}</option>
-            </select>
+  <main class="container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title">Start server</h1>
+            <div class="card-text">
+              <form #form="ngForm" (ngSubmit)="startFactorio(form, $event)">
+                <div>
+                  <select #creationSelect name="creationSelect" [(ngModel)]="data.creationSelect">
+                    <option *ngFor="let save of factorioSaves">{{save}}</option>
+                  </select>
+                </div>
+                <div>
+                  <button type="submit" class="btn btn-dark">Start</button>
+                </div>
+              </form>
+            </div>
           </div>
-          <div>
-            <button type="submit" class="btn full-rounded">Start</button>
-          </div>
-        </form>
-      </div>
-      <div class="block shadow much-rounded">
-        <h1>Factorio</h1>
-        <div>
-          <select>
-            <option *ngFor="let save of factorioSaves" value="{{save}}">{{save}}</option>
-          </select>
         </div>
-        <div>
-          <button class="btn full-rounded" (click)="stopFactorio($event)">Stop</button>
+      </div>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card">
+          <div class="card-body">
+            <h1 class="card-title">Stop server</h1>
+            <div class="card-text">
+              <select>
+                <option *ngFor="let save of factorioSaves" value="{{save}}">{{save}}</option>
+              </select>
+            </div>
+            <div>
+              <button class="btn btn-dark" (click)="stopFactorio($event)">Stop</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -1,8 +1,13 @@
 app-server-selector {
+    align-self: stretch;
     width: 20%;
 }
 
-.scrollbar::-webkit-scrollbar {
+body {
+    height: 100vh;
+}
+
+/*.scrollbar::-webkit-scrollbar {
     width: 0.5rem;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.24) inset;
 }
@@ -25,7 +30,7 @@ app-server-selector {
 
 .scrollbar-hidden::-webkit-scrollbar {
     display: none;
-}
+}*/
 
 
 h1 {
@@ -48,3 +53,6 @@ h1 {
     padding: 1rem;
 }
 
+a {
+    cursor: pointer;
+}

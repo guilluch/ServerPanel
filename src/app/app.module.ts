@@ -18,7 +18,7 @@ import { FactorioPanelComponent } from './factorio-panel/factorio-panel.componen
 
 
 const appRoutes: Routes = [
-  {path: '', component: AdminComponent, canActivate: [LoginRequired]},
+  {path: '', redirectTo: 'admin', pathMatch: 'full'},
   {path: 'login', component: LoginComponent, canActivate: [GuestRequired]},
   {path: 'admin', component: AdminComponent, canActivate: [LoginRequired]},
   {path: 'admin/teamspeak', component: TeamspeakPanelComponent, canActivate: [LoginRequired]},
