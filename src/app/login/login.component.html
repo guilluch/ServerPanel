@@ -1,15 +1,15 @@
 <main>
   <div class="container">
-    <form class="form">
-      <div class="input-field" style="position: relative;">
-        <input id="username" class="input" type="text" placeholder=" "/>
+    <form class="form w-25 mx-auto">
+      <div class="form-group" style="position: relative;">
         <label for="username" class="internal-label">Username</label>
+        <input id="username" class="form-control rounded-pill" type="text" placeholder=" "/>
       </div>
-      <div class="input-field" style="position: relative;">
-        <input id="password" class="input" type="password" placeholder=" "/>
+      <div class="form-group" style="position: relative;">
         <label for="password" class="internal-label">Password</label>
+        <input id="password" class="form-control rounded-pill" type="password" placeholder=" "/>
       </div>
-      <input class="btn full-rounded shadow h-align-center" type="submit" value="Login" (click)="login($event)"/>
+      <input class="btn btn-dark material rounded-pill mx-auto" type="submit" value="Login" (click)="login($event)"/>
     </form>
   </div>
 </main>
