@@ -1,17 +1,16 @@
-<div class="d-flex">
-  <app-server-selector></app-server-selector>
-  <main class="container">
-    <div class="row">
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card much-rounded">
-          <div class="card-body">
-            <h1 class="card-title">Teamspeak</h1>
-            <button class="btn btn-dark rounded-lg dimension-3" (click)="startTS($event)">Start</button>
-            <button class="btn btn-dark rounded-lg dimension-3" (click)="stopTS($event)">Stop</button>
-            <button class="btn btn-dark rounded-lg dimension-3" (click)="restartTS($event)">Restart</button>
+<main class="container">
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card much-rounded">
+        <div class="card-body">
+          <h1 class="card-title">Teamspeak</h1>
+          <div class="text-center">
+            <button class="btn btn-dark rounded-pill material" (click)="startTS($event)">Start</button>
+            <button class="btn btn-dark rounded-pill material" (click)="stopTS($event)">Stop</button>
+            <button class="btn btn-dark rounded-pill material" (click)="restartTS($event)">Restart</button>
           </div>
         </div>
       </div>
     </div>
-  </main>
-</div>
+  </div>
+</main>
